@@ -4,7 +4,7 @@
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
         <h1 class="h3 mb-0">ВКонтакте</h1>
-        <p class="text-muted mb-0">Настройка мониторинга VK групп</p>
+        <p class="text-muted mb-0">Мониторинг групп и страниц пользователей</p>
     </div>
 </div>
 
@@ -22,7 +22,7 @@
                         <textarea name="access_token" class="form-control" rows="3
 ">{{ config.access_token or '' }}</textarea>
                         <div class="form-text">
-                            <a href="https://vk.com/dev" target="_blank">Документация VK API</a> | 
+                            <a href="https://vk.com/dev" target="_blank">Документация VK API</a> |
                             Используйте <a href="https://vk.com/editapp?act=create" target="_blank">Standalone-приложение</a>
                         </div>
                     </div>
@@ -33,37 +33,40 @@
             </div>
         </div>
     </div>
-    
-    <!-- Groups -->
+
+    <!-- Sources (Groups + Users) -->
     <div class="col-md-6">
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
-                <span><i class="bi bi-collection me-2"></i>Группы для мониторинга</span>
-                <span class="badge bg-secondary">{{ groups|length }} групп</span>
+                <span><i class="bi bi-collection me-2"></i>Источники для мониторинга</span>
+                <span class="badge bg-secondary">{{ groups|length }} источников</span>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{ url_for('add_vk_group') }}" class="mb-3">
                     <div class="input-group">
-                        <input type="text" name="group" class="form-control" 
-                               placeholder="ID или короткое имя группы" required>
+                        <input type="text" name="group" class="form-control"
+                               placeholder="Группа или пользователь" required>
                         <button type="submit" class="btn btn-success">
                             <i class="bi bi-plus"></i>
                         </button>
                     </div>
-                    <div class="form-text">Формат: group_id (например: 1) или screen_name (например: apiclub)</div>
+                    <div class="form-text">
+                        Группы: ID (1) или screen_name (apiclub)<br>
+                        Пользователи: ID (1) или домен (durov)
+                    </div>
                 </form>
-                
+
                 {% if groups %}
                 <div class="list-group list-group-flush item-list">
                     {% for group in groups %}
                     <div class="list-group-item d-flex justify-content-between align-items-center px-0">
                         <div>
-                            <i class="bi bi-people-fill text-primary me-2"></i>
+                            <i class="bi bi-collection-fill text-primary me-2"></i>
                             {{ group }}
                         </div>
-                        <a href="{{ url_for('remove_vk_group', group=group) }}" 
+                        <a href="{{ url_for('remove_vk_group', group=group) }}"
                            class="btn btn-outline-danger btn-sm"
-                           onclick="return confirm('Удалить группу?')">
+                           onclick="return confirm('Удалить источник?')">
                             <i class="bi bi-trash"></i>
                         </a>
                     </div>
@@ -72,7 +75,7 @@
                 {% else %}
                 <div class="text-center text-muted py-4">
                     <i class="bi bi-chat-square-text fs-1"></i>
-                    <p class="mt-2 mb-0">Нет добавленных групп</p>
+                    <p class="mt-2 mb-0">Нет добавленных источников</p>
                 </div>
                 {% endif %}
             </div>
@@ -83,7 +86,40 @@
 <!-- Help -->
 <div class="card mt-4">
     <div class="card-header">
-        <i class="bi bi-question-circle me-2"></i>Как получить Access Token
+        <i class="bi bi-question-circle me-2"></i>Справка по источникам
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h6><i class="bi bi-people-fill text-primary me-2"></i>Группы</h6>
+                <ul class="mb-0">
+                    <li><strong>ID группы:</strong> <code>123456</code> или <code>-123456</code></li>
+                    <li><strong>Короткое имя:</strong> <code>apiclub</code></li>
+                    <li><strong>Ссылка:</strong> <code>https://vk.com/apiclub</code></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h6><i class="bi bi-person-fill text-success me-2"></i>Пользователи</h6>
+                <ul class="mb-0">
+                    <li><strong>ID пользователя:</strong> <code>1</code></li>
+                    <li><strong>Домен:</strong> <code>durov</code></li>
+                    <li><strong>Ссылка:</strong> <code>https://vk.com/durov</code></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="alert alert-info mt-3 mb-0">
+            <i class="bi bi-info-circle me-2"></i>
+            <strong>Важно:</strong> Для мониторинга пользователей ваш Access Token должен иметь право <code>wall</code>.
+            Приватные профили недоступны для мониторинга.
+        </div>
+    </div>
+</div>
+
+<!-- Token Help -->
+<div class="card mt-4">
+    <div class="card-header">
+        <i class="bi bi-key me-2"></i>Как получить Access Token
     </div>
     <div class="card-body">
         <ol class="mb-0">

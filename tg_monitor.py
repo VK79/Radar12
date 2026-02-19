@@ -5,7 +5,7 @@ import json
 import logging
 import asyncio
 from typing import List, Dict, Optional, Set
-from datetime import datetime
+from datetime import datetime, timedelta
 
 try:
     from telethon import TelegramClient, errors
@@ -224,9 +224,9 @@ class TelegramMonitor:
                             'channel_name': channel_name,
                             'channel_url': channel_url,
                             'message_id': msg_id,
-                            'text': text[:500] + ('...' if len(text) > 500 else ''),
+                            'text': text[:300] + ('...' if len(text) > 500 else ''),
                             'keywords': found_keywords,
-                            'date': msg['date'],
+                            'date': (datetime.fromisoformat(msg['date'][:-6]) + timedelta(hours=3)).strftime("%d.%m.%Y %H:%M:%S"),
                             'url': f"{channel_url}/{msg_id}" if channel_url else None
                         })
                 
