@@ -1,0 +1,15 @@
+# VK & Telegram Monitor Requirements
+
+# Telegram
+telethon>=1.28.0
+aiohttp>=3.8.0
+
+# VK
+vk-api>=11.9.0
+
+# Web Admin
+flask>=2.3.0
+flask-login>=0.6.0
+
+# Optional improvements
+python-dotenv>=1.0.0

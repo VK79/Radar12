@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="h3 mb-0">Telegram</h1>
+        <p class="text-muted mb-0">Настройка мониторинга Telegram каналов</p>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Configuration -->
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-header">
+                <i class="bi bi-gear me-2"></i>Конфигурация API
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('update_telegram_config') }}">
+                    <div class="mb-3">
+                        <label class="form-label">API ID</label>
+                        <input type="number" name="api_id" class="form-control" 
+                               value="{{ config.api_id or '' }}" placeholder="12345678">
+                        <div class="form-text">Получите на <a href="https://my.telegram.org" target="_blank">my.telegram.org</a></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">API Hash</label>
+                        <input type="text" name="api_hash" class="form-control" 
+                               value="{{ config.api_hash or '' }}" placeholder="a1b2c3d4e5f6...">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Bot Token</label>
+                        <input type="text" name="bot_token" class="form-control" 
+                               value="{{ config.bot_token or '' }}" placeholder="123456789:ABCdefGHIjklMNOpqrSTUvwxYZ">
+                        <div class="form-text">Для отправки уведомлений. Получите у <a href="https://t.me/BotFather" target="_blank">@BotFather</a></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Номер телефона</label>
+                        <input type="text" name="phone" class="form-control" 
+                               value="{{ config.phone or '' }}" placeholder="+79991234567">
+                        <div class="form-text">Для мониторинга каналов (нужна авторизация)</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save me-2"></i>Сохранить
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Channels -->
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-collection me-2"></i>Каналы для мониторинга</span>
+                <span class="badge bg-secondary">{{ channels|length }} каналов</span>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('add_telegram_channel') }}" class="mb-3">
+                    <div class="input-group">
+                        <input type="text" name="channel" class="form-control" 
+                               placeholder="@username или ссылка" required>
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+                    <div class="form-text">Формат: @channel_name или https://t.me/channel_name</div>
+                </form>
+                
+                {% if channels %}
+                <div class="list-group list-group-flush item-list">
+                    {% for channel in channels %}
+                    <div class="list-group-item d-flex justify-content-between align-items-center px-0">
+                        <div>
+                            <i class="bi bi-hash text-info me-2"></i>
+                            {{ channel }}
+                        </div>
+                        <a href="{{ url_for('remove_telegram_channel', channel=channel) }}" 
+                           class="btn btn-outline-danger btn-sm"
+                           onclick="return confirm('Удалить канал?')">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="text-center text-muted py-4">
+                    <i class="bi bi-telegram fs-1"></i>
+                    <p class="mt-2 mb-0">Нет добавленных каналов</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Authorization Info -->
+<div class="alert alert-warning mt-4">
+    <i class="bi bi-exclamation-triangle me-2"></i>
+    <strong>Важно:</strong> После заполнения API ID и API Hash необходимо выполнить авторизацию:
+    <br><code>python main.py --authorize</code>
+</div>
+{% endblock %}

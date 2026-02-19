@@ -1,0 +1,53 @@
+{
+  "telegram": {
+    "api_id": 33865086,
+    "api_hash": "6b000d987e76af9c3cc909048064217b",
+    "bot_token": "8453652959:AAFNOPhpJy3sWiBVQ1xaTlg_FP4-venMIfg",
+    "phone": "+79613365212",
+    "channels": [
+      "@marireporter",
+      "@marimlande",
+      "@rzsentinel",
+      "@kprf12reg",
+      "@StrokinElbaktr",
+      "@vybora",
+      "@vybory_brief",
+      "@y555142",
+      "marireporter"
+    ]
+  },
+  "vk": {
+    "access_token": "vk1.a.ScAl9_h5N9g7QaGjHX44_HjLwVxPfjuqo8rbPe10rhDh2vqYc-g8Re5UjLFfVA9FoUlsCTAL6PtTAqLjoygVBMZqFIMxyCmItjKMnnFyiazf_7z2-5e9HVru3QQT3VsxXIyhI-zAdselrcfyu8ipn3iXdnqB18P4Q1IOlK5K41JfAAMq2DY4U520eonYYFkMR_UD7FiezIJ1yip4y6SLJQ",
+    "groups": [
+      "spravoross12",
+      "y_o_12",
+      "yoshkaonline",
+      "zharamariel",
+      "chp_yola12",
+      "dp_yo",
+      "id125219567",
+      "kirillpanko",
+      "kprf_12",
+      "marielonline",
+      "overhearyola",
+      "semgazeta12"
+    ]
+  },
+  "keywords": [
+    "депутат",
+    "избирком марий эл",
+    "справедливая"
+  ],
+  "recipients": [
+    1094254475
+  ],
+  "admin": {
+    "username": "admin",
+    "password": "admin123",
+    "secret_key": "change-this-secret-key-in-production"
+  },
+  "monitoring": {
+    "check_interval": 120,
+    "max_posts_per_check": 30
+  }
+}

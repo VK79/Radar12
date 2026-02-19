@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="h3 mb-0">Панель управления</h1>
+        <p class="text-muted mb-0">Мониторинг VK и Telegram каналов</p>
+    </div>
+    <div>
+        {% if monitor_running %}
+        <button class="btn btn-danger" onclick="stopMonitor()">
+            <i class="bi bi-stop-circle me-1"></i>Остановить
+        </button>
+        {% else %}
+        <button class="btn btn-success" onclick="startMonitor()">
+            <i class="bi bi-play-circle me-1"></i>Запустить
+        </button>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Status Banner -->
+<div class="alert {{ 'alert-success' if monitor_running else 'alert-warning' }} d-flex align-items-center mb-4">
+    <i class="bi {{ 'bi-check-circle-fill' if monitor_running else 'bi-pause-circle-fill' }} me-2 fs-4"></i>
+    <div>
+        <strong>Статус:</strong> 
+        {{ 'Мониторинг активен' if monitor_running else 'Мониторинг остановлен' }}
+    </div>
+</div>
+
+<!-- Stats Cards -->
+<div class="row g-4 mb-4">
+    <div class="col-md-3">
+        <div class="card card-stat keywords h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Ключевые слова</h6>
+                        <h3 class="mb-0">{{ config.keywords|length }}</h3>
+                    </div>
+                    <div class="bg-success bg-opacity-10 p-3 rounded">
+                        <i class="bi bi-key text-success fs-4"></i>
+                    </div>
+                </div>
+                <a href="{{ url_for('keywords') }}" class="stretched-link"></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card card-stat recipients h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">Получатели</h6>
+                        <h3 class="mb-0">{{ config.recipients|length }}</h3>
+                    </div>
+                    <div class="bg-warning bg-opacity-10 p-3 rounded">
+                        <i class="bi bi-people text-warning fs-4"></i>
+                    </div>
+                </div>
+                <a href="{{ url_for('recipients') }}" class="stretched-link"></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card card-stat telegram h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">TG каналы</h6>
+                        <h3 class="mb-0">{{ config.telegram.channels|length }}</h3>
+                    </div>
+                    <div class="bg-info bg-opacity-10 p-3 rounded">
+                        <i class="bi bi-telegram text-info fs-4"></i>
+                    </div>
+                </div>
+                <a href="{{ url_for('telegram') }}" class="stretched-link"></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card card-stat vk h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-muted mb-1">VK группы</h6>
+                        <h3 class="mb-0">{{ config.vk.groups|length }}</h3>
+                    </div>
+                    <div class="bg-primary bg-opacity-10 p-3 rounded">
+                        <i class="bi bi-chat-square-text text-primary fs-4"></i>
+                    </div>
+                </div>
+                <a href="{{ url_for('vk') }}" class="stretched-link"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Settings -->
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-header">
+                <i class="bi bi-clock me-2"></i>Настройки мониторинга
+            </div>
+            <div class="card-body">
+                <table class="table table-sm">
+                    <tr>
+                        <td>Интервал проверки:</td>
+                        <td><strong>{{ config.monitoring.check_interval }} сек.</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Максимум постов за проверку:</td>
+                        <td><strong>{{ config.monitoring.max_posts_per_check }}</strong></td>
+                    </tr>
+                </table>
+                <a href="{{ url_for('settings') }}" class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-pencil me-1"></i>Изменить
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-header">
+                <i class="bi bi-info-circle me-2"></i>Быстрые действия
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a href="{{ url_for('keywords') }}" class="btn btn-outline-success">
+                        <i class="bi bi-plus-circle me-2"></i>Добавить ключевое слово
+                    </a>
+                    <a href="{{ url_for('telegram') }}" class="btn btn-outline-info">
+                        <i class="bi bi-telegram me-2"></i>Настроить Telegram
+                    </a>
+                    <a href="{{ url_for('vk') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-chat-square-text me-2"></i>Настроить VK
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function startMonitor() {
+    try {
+        const response = await fetch('/api/start', { method: 'POST' });
+        const data = await response.json();
+        alert(data.message);
+        location.reload();
+    } catch (error) {
+        alert('Ошибка: ' + error);
+    }
+}
+
+async function stopMonitor() {
+    try {
+        const response = await fetch('/api/stop', { method: 'POST' });
+        const data = await response.json();
+        alert(data.message);
+        location.reload();
+    } catch (error) {
+        alert('Ошибка: ' + error);
+    }
+}
+</script>
+{% endblock %}

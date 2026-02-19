@@ -1,0 +1,10 @@
+{
+  "name": "monitor-service",
+  "version": "1.0.0",
+  "description": "VK and Telegram monitoring service",
+  "scripts": {
+    "dev": "python main.py",
+    "admin": "python main.py --admin",
+    "authorize": "python main.py --authorize"
+  }
+}

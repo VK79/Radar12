@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="h3 mb-0">ВКонтакте</h1>
+        <p class="text-muted mb-0">Настройка мониторинга VK групп</p>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Configuration -->
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-header">
+                <i class="bi bi-gear me-2"></i>Конфигурация API
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('update_vk_config') }}">
+                    <div class="mb-3">
+                        <label class="form-label">Access Token</label>
+                        <textarea name="access_token" class="form-control" rows="3
+">{{ config.access_token or '' }}</textarea>
+                        <div class="form-text">
+                            <a href="https://vk.com/dev" target="_blank">Документация VK API</a> | 
+                            Используйте <a href="https://vk.com/editapp?act=create" target="_blank">Standalone-приложение</a>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save me-2"></i>Сохранить
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Groups -->
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-collection me-2"></i>Группы для мониторинга</span>
+                <span class="badge bg-secondary">{{ groups|length }} групп</span>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('add_vk_group') }}" class="mb-3">
+                    <div class="input-group">
+                        <input type="text" name="group" class="form-control" 
+                               placeholder="ID или короткое имя группы" required>
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+                    <div class="form-text">Формат: group_id (например: 1) или screen_name (например: apiclub)</div>
+                </form>
+                
+                {% if groups %}
+                <div class="list-group list-group-flush item-list">
+                    {% for group in groups %}
+                    <div class="list-group-item d-flex justify-content-between align-items-center px-0">
+                        <div>
+                            <i class="bi bi-people-fill text-primary me-2"></i>
+                            {{ group }}
+                        </div>
+                        <a href="{{ url_for('remove_vk_group', group=group) }}" 
+                           class="btn btn-outline-danger btn-sm"
+                           onclick="return confirm('Удалить группу?')">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="text-center text-muted py-4">
+                    <i class="bi bi-chat-square-text fs-1"></i>
+                    <p class="mt-2 mb-0">Нет добавленных групп</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Help -->
+<div class="card mt-4">
+    <div class="card-header">
+        <i class="bi bi-question-circle me-2"></i>Как получить Access Token
+    </div>
+    <div class="card-body">
+        <ol class="mb-0">
+            <li>Перейдите на <a href="https://vk.com/editapp?act=create" target="_blank">страницу создания приложений</a></li>
+            <li>Создайте Standalone-приложение</li>
+            <li>Скопируйте ID приложения</li>
+            <li>Перейдите по ссылке (замените CLIENT_ID):
+                <br><code class="d-block bg-light p-2 mt-2">https://oauth.vk.com/authorize?client_id=CLIENT_ID&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=groups,wall,offline&response_type=token&v=5.131</code>
+            </li>
+            <li>Разрешите доступ приложению</li>
+            <li>Скопируйте access_token из адресной строки</li>
+        </ol>
+    </div>
+</div>
+{% endblock %}

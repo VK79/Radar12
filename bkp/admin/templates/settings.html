@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="h3 mb-0">Настройки</h1>
+        <p class="text-muted mb-0">Общие настройки системы мониторинга</p>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Admin Settings -->
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-header">
+                <i class="bi bi-person-lock me-2"></i>Настройки администратора
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('update_admin_settings') }}">
+                    <div class="mb-3">
+                        <label class="form-label">Имя пользователя</label>
+                        <input type="text" name="username" class="form-control" 
+                               value="{{ admin.username or '' }}" placeholder="admin">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Новый пароль</label>
+                        <input type="password" name="password" class="form-control" 
+                               placeholder="Оставьте пустым, чтобы не менять">
+                        <div class="form-text">Текущий пароль: {{ admin.password or 'не установлен' }}</div>
+                    </div>
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        Изменение данных потребует повторной авторизации
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save me-2"></i>Сохранить
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Monitoring Settings -->
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-header">
+                <i class="bi bi-clock-history me-2"></i>Настройки мониторинга
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('update_monitoring_settings') }}">
+                    <div class="mb-3">
+                        <label class="form-label">Интервал проверки (секунды)</label>
+                        <input type="number" name="check_interval" class="form-control" 
+                               value="{{ monitoring.check_interval or 300 }}" min="30" max="3600">
+                        <div class="form-text">Как часто проверять новые посты (рекомендуется 300 сек)</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Максимум постов за проверку</label>
+                        <input type="number" name="max_posts_per_check" class="form-control" 
+                               value="{{ monitoring.max_posts_per_check or 20 }}" min="5" max="100">
+                        <div class="form-text">Количество последних постов для анализа</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save me-2"></i>Сохранить
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- System Info -->
+<div class="card mt-4">
+    <div class="card-header">
+        <i class="bi bi-info-circle me-2"></i>Системная информация
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-sm">
+                    <tr>
+                        <td class="text-muted">Конфигурационный файл:</td>
+                        <td><code>config.json</code></td>
+                    </tr>
+                    <tr>
+                        <td class="text-muted">Лог-файл:</td>
+                        <td><code>monitor.log</code></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-sm">
+                    <tr>
+                        <td class="text-muted">Порт админки:</td>
+                        <td><code>5000</code></td>
+                    </tr>
+                    <tr>
+                        <td class="text-muted">Файл сессии TG:</td>
+                        <td><code>monitor_session.session</code></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="h3 mb-0">AI Анализ</h1>
+        <p class="text-muted mb-0">Настройка нейросетевого анализа постов через OpenRouter</p>
+    </div>
+</div>
+
+<!-- Status Card -->
+<div class="card mb-4 {{ 'border-success' if config.enabled else 'border-warning' }}">
+    <div class="card-body">
+        <div class="d-flex align-items-center">
+            {% if config.enabled %}
+            <div class="bg-success bg-opacity-10 p-3 rounded me-3">
+                <i class="bi bi-robot text-success fs-3"></i>
+            </div>
+            <div>
+                <h5 class="mb-1">AI Анализ включен</h5>
+                <p class="text-muted mb-0">Модель: <code>{{ config.model }}</code></p>
+            </div>
+            {% else %}
+            <div class="bg-warning bg-opacity-10 p-3 rounded me-3">
+                <i class="bi bi-robot text-warning fs-3"></i>
+            </div>
+            <div>
+                <h5 class="mb-1">AI Анализ выключен</h5>
+                <p class="text-muted mb-0">Включите после настройки API ключа</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- API Configuration -->
+    <div class="col-lg-6">
+        <div class="card h-100">
+            <div class="card-header">
+                <i class="bi bi-key me-2"></i>API Конфигурация
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('update_ai_config') }}">
+                    <div class="mb-3">
+                        <label class="form-label">OpenRouter API Key</label>
+                        <input type="password" name="api_key" class="form-control" 
+                               value="{{ config.api_key or '' }}" 
+                               placeholder="sk-or-v1-...">
+                        <div class="form-text">
+                            Получите ключ на <a href="https://openrouter.ai/keys" target="_blank">openrouter.ai/keys</a>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Модель</label>
+                        <input type="text" name="model" class="form-control" 
+                               value="{{ config.model or 'deepseek/deepseek-r1-0528:free' }}" 
+                               placeholder="deepseek/deepseek-r1-0528:free">
+                        <div class="form-text">
+                            Популярные модели:
+                            <ul class="mb-0 mt-1">
+                                <li><code>deepseek/deepseek-r1-0528:free</code> - бесплатно</li>
+                                <li><code>google/gemini-2.0-flash-exp:free</code> - бесплатно</li>
+                                <li><code>meta-llama/llama-3.3-70b-instruct:free</code> - бесплатно</li>
+                                <li><code>openai/gpt-4o-mini</code> - платно</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" name="enabled" id="aiEnabled"
+                                   {% if config.enabled %}checked{% endif %}>
+                            <label class="form-check-label" for="aiEnabled">
+                                Включить AI анализ
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save me-2"></i>Сохранить настройки
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Prompt Configuration -->
+    <div class="col-lg-6">
+        <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-chat-text me-2"></i>Промпт для анализа</span>
+                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="resetPrompt()">
+                    <i class="bi bi-arrow-counterclockwise me-1"></i>Сбросить
+                </button>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('update_ai_prompt') }}" id="promptForm">
+                    <div class="mb-3">
+                        <textarea name="prompt" id="promptTextarea" class="form-control" rows="10
+">{{ config.prompt or '' }}</textarea>
+                        <div class="form-text">
+                            Используйте <code>{text}</code> как плейсхолдер для текста поста
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save me-2"></i>Сохранить промпт
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Test Section -->
+<div class="card mt-4">
+    <div class="card-header">
+        <i class="bi bi-play-circle me-2"></i>Тест AI анализа
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label class="form-label">Текст для теста</label>
+            <textarea id="testText" class="form-control" rows="4" placeholder="Введите текст поста для анализа...">Важное объявление! Завтра в 15:00 состоится онлайн-встреча по обсуждению нового проекта. Все желающие могут присоединиться по ссылке в описании канала.</textarea>
+        </div>
+        <button type="button" class="btn btn-success" onclick="runTest()" id="testBtn">
+            <i class="bi bi-cpu me-2"></i>Запустить анализ
+        </button>
+        
+        <div id="testResult" class="mt-3" style="display: none;">
+            <label class="form-label">Результат:</label>
+            <div class="card bg-light">
+                <div class="card-body">
+                    <pre id="resultText" class="mb-0" style="white-space: pre-wrap;"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Help -->
+<div class="card mt-4">
+    <div class="card-header">
+        <i class="bi bi-question-circle me-2"></i>Справка
+    </div>
+    <div class="card-body">
+        <h6>Что такое OpenRouter?</h6>
+        <p>OpenRouter — это сервис, предоставляющий единый API для доступа к различным языковым моделям (GPT-4, Claude, Llama, DeepSeek и др.) с прозрачной оплатой.</p>
+        
+        <h6>Как получить API ключ?</h6>
+        <ol>
+            <li>Зарегистрируйтесь на <a href="https://openrouter.ai" target="_blank">openrouter.ai</a></li>
+            <li>Пополните баланс (для платных моделей) или используйте бесплатные</li>
+            <li>Создайте API ключ в разделе <a href="https://openrouter.ai/keys" target="_blank">Keys</a></li>
+        </ol>
+        
+        <h6>Бесплатные модели</h6>
+        <p>Модели с суффиксом <code>:free</code> работают бесплатно, но могут иметь ограничения по скорости и количеству запросов.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const defaultPrompt = `Ты - аналитик социальных сетей. Проанализируй следующий пост из социальной сети.
+
+Твоя задача:
+1. Определи основную тему и смысл поста
+2. Оцени тональность (позитивная/негативная/нейтральная)
+3. Выдели ключевые тезисы или факты
+4. Если есть призыв к действию - укажи какой
+
+Ответь кратко и структурировано (не более 3-4 предложений).
+
+Пост для анализа:
+{text}`;
+
+function resetPrompt() {
+    document.getElementById('promptTextarea').value = defaultPrompt;
+}
+
+async function runTest() {
+    const btn = document.getElementById('testBtn');
+    const resultDiv = document.getElementById('testResult');
+    const resultText = document.getElementById('resultText');
+    const testText = document.getElementById('testText').value;
+    
+    if (!testText.trim()) {
+        alert('Введите текст для анализа');
+        return;
+    }
+    
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Анализирую...';
+    resultDiv.style.display = 'none';
+    
+    try {
+        const response = await fetch('/api/ai/test', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({text: testText})
+        });
+        
+        const data = await response.json();
+        
+        resultDiv.style.display = 'block';
+        
+        if (data.success) {
+            resultText.textContent = data.analysis;
+        } else {
+            resultText.textContent = 'Ошибка: ' + data.error;
+        }
+    } catch (error) {
+        resultDiv.style.display = 'block';
+        resultText.textContent = 'Ошибка запроса: ' + error;
+    }
+    
+    btn.disabled = false;
+    btn.innerHTML = '<i class="bi bi-cpu me-2"></i>Запустить анализ';
+}
+</script>
+{% endblock %}

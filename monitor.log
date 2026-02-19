@@ -1,0 +1,469 @@
+2026-02-19 14:54:56,817 - __main__ - INFO - Поток мониторинга запущен
+2026-02-19 14:54:57,200 - vk_monitor - INFO - Успешное подключение к VK API
+2026-02-19 14:54:57,200 - __main__ - INFO - VK монитор инициализирован
+2026-02-19 14:54:57,608 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.211:5000
+2026-02-19 14:54:57,608 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-19 14:54:57,668 - telethon.crypto.libssl - INFO - Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2026-02-19 14:54:57,675 - telethon.crypto.aes - INFO - cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2026-02-19 14:54:58,388 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2026-02-19 14:54:58,390 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2026-02-19 14:54:58,891 - tg_monitor - INFO - Успешное подключение к Telegram
+2026-02-19 14:54:58,891 - __main__ - INFO - Telegram монитор инициализирован
+2026-02-19 14:54:58,892 - __main__ - INFO - Telegram нотификатор инициализирован
+2026-02-19 14:54:58,914 - __main__ - INFO - AI-анализ выключен или не настроен
+2026-02-19 14:54:58,914 - __main__ - INFO - Мониторинг запущен. Интервал проверки: 120 сек.
+2026-02-19 14:54:58,914 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 14:55:04,061 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 14:55:04] "GET / HTTP/1.1" 200 -
+2026-02-19 14:55:08,298 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 14:55:08] "GET /ai HTTP/1.1" 200 -
+2026-02-19 14:55:10,573 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 14:55:10,574 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 14:55:11,003 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 14:55:11,003 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 14:55:16,387 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 14:55:16,387 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 14:55:16,388 - __main__ - INFO - Найдено 22 совпадений в VK
+2026-02-19 14:55:16,388 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 14:55:30,298 - __main__ - INFO - Найдено 22 совпадений в Telegram
+2026-02-19 14:55:30,707 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:31,120 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:31,498 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:31,890 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:32,271 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:32,667 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:33,111 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:33,504 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:33,884 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:34,264 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:34,657 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:35,046 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:35,504 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:35,879 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:36,277 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:36,649 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:37,030 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:37,405 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:37,779 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:38,175 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:38,541 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:38,922 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:39,316 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:39,713 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:40,094 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:40,502 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:40,869 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:41,249 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:41,644 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:42,040 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:42,450 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:42,811 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:43,208 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:43,586 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:43,981 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:44,345 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:44,726 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:45,136 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:45,529 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:45,989 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:46,445 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:46,872 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:47,327 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:55:47,819 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 14:56:26,021 - main - INFO - Конфигурация сохранена
+2026-02-19 14:56:26,023 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 14:56:26] "[32mPOST /ai/config HTTP/1.1[0m" 302 -
+2026-02-19 14:56:26,091 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 14:56:26] "GET /ai HTTP/1.1" 200 -
+2026-02-19 14:57:53,364 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 14:58:02,845 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 14:58:02,846 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 14:58:03,289 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 14:58:03,290 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 14:58:08,728 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 14:58:08,728 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 14:58:08,728 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 14:58:08,728 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 14:58:22,859 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:00:24,735 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:00:34,197 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:00:34,197 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:00:34,636 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:00:34,637 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:00:40,307 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:00:40,307 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:00:40,307 - __main__ - INFO - Найдено 1 совпадений в VK
+2026-02-19 15:00:40,307 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:00:53,985 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:00:54,443 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:01:01,861 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:01:01] "POST /api/ai/test HTTP/1.1" 200 -
+2026-02-19 15:02:39,380 - main - INFO - Конфигурация сохранена
+2026-02-19 15:02:39,381 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:02:39] "[32mPOST /ai/config HTTP/1.1[0m" 302 -
+2026-02-19 15:02:39,413 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:02:39] "GET /ai HTTP/1.1" 200 -
+2026-02-19 15:02:43,497 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:02:43] "POST /api/ai/test HTTP/1.1" 200 -
+2026-02-19 15:02:58,817 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:02:59,329 - main - INFO - Конфигурация сохранена
+2026-02-19 15:02:59,330 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:02:59] "[32mPOST /ai/config HTTP/1.1[0m" 302 -
+2026-02-19 15:02:59,348 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:02:59] "GET /ai HTTP/1.1" 200 -
+2026-02-19 15:03:02,104 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:03:02] "POST /api/ai/test HTTP/1.1" 200 -
+2026-02-19 15:03:08,321 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:03:08,321 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:03:08,778 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:03:08,778 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:03:14,372 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:03:14,372 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:03:14,373 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:03:14,373 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:03:20,850 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:03:20] "POST /api/ai/test HTTP/1.1" 200 -
+2026-02-19 15:03:28,353 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:04:11,336 - main - INFO - Конфигурация сохранена
+2026-02-19 15:04:11,337 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:04:11] "[32mPOST /ai/config HTTP/1.1[0m" 302 -
+2026-02-19 15:04:11,390 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:04:11] "GET /ai HTTP/1.1" 200 -
+2026-02-19 15:04:14,940 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:04:14] "POST /api/ai/test HTTP/1.1" 200 -
+2026-02-19 15:05:32,462 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:05:42,134 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:05:42,134 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:05:42,580 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:05:42,580 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:05:48,088 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:05:48,088 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:05:48,089 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:05:48,089 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:06:02,838 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:06:59,507 - main - INFO - Конфигурация сохранена
+2026-02-19 15:06:59,508 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:06:59] "[32mPOST /ai/config HTTP/1.1[0m" 302 -
+2026-02-19 15:06:59,531 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:06:59] "GET /ai HTTP/1.1" 200 -
+2026-02-19 15:08:01,856 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:08:01] "POST /api/ai/test HTTP/1.1" 200 -
+2026-02-19 15:08:07,982 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:08:17,321 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:08:17,321 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:08:17,763 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:08:17,763 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:08:23,258 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:08:23,258 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:08:23,258 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:08:23,258 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:08:30,925 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:08:30] "GET /vk HTTP/1.1" 200 -
+2026-02-19 15:08:34,633 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:08:34] "GET /telegram HTTP/1.1" 200 -
+2026-02-19 15:08:36,764 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:08:39,559 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:08:39] "GET /recipients HTTP/1.1" 200 -
+2026-02-19 15:08:44,008 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:08:44] "GET /keywords HTTP/1.1" 200 -
+2026-02-19 15:08:47,384 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:08:47] "GET / HTTP/1.1" 200 -
+2026-02-19 15:08:54,541 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:08:54] "GET /ai HTTP/1.1" 200 -
+2026-02-19 15:09:19,679 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:09:19] "POST /api/ai/test HTTP/1.1" 200 -
+2026-02-19 15:09:59,013 - telethon.client.updates - INFO - Got difference for account updates
+2026-02-19 15:11:06,412 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:11:15,737 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:11:15,737 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:11:16,172 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:11:16,172 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:11:21,367 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:11:21,367 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:11:21,367 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:11:21,367 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:11:34,848 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:11:43,789 - main - INFO - Конфигурация сохранена
+2026-02-19 15:11:43,795 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:11:43] "[32mPOST /ai/prompt HTTP/1.1[0m" 302 -
+2026-02-19 15:11:43,804 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:11:43] "GET /ai HTTP/1.1" 200 -
+2026-02-19 15:11:47,117 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:11:47] "GET / HTTP/1.1" 200 -
+2026-02-19 15:11:52,754 - main - INFO - Поток мониторинга запущен
+2026-02-19 15:11:52,754 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:11:52] "POST /api/start HTTP/1.1" 200 -
+2026-02-19 15:11:52,763 - vk_monitor - INFO - Успешное подключение к VK API
+2026-02-19 15:11:52,763 - main - INFO - VK монитор инициализирован
+2026-02-19 15:11:52,765 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2026-02-19 15:11:52,770 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2026-02-19 15:11:54,810 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:11:54] "GET / HTTP/1.1" 200 -
+2026-02-19 15:11:58,468 - tg_monitor - ERROR - Ошибка подключения к Telegram: database is locked
+2026-02-19 15:11:58,468 - main - INFO - Telegram монитор инициализирован
+2026-02-19 15:11:58,468 - main - INFO - Telegram нотификатор инициализирован
+2026-02-19 15:11:58,468 - ai_analyzer - INFO - AI-анализатор инициализирован. Модель: z-ai/glm-4.5-air:free
+2026-02-19 15:11:58,468 - main - INFO - AI-анализатор инициализирован
+2026-02-19 15:11:58,468 - main - INFO - Мониторинг запущен. Интервал проверки: 120 сек.
+2026-02-19 15:11:58,469 - main - INFO - Проверка 12 VK групп...
+2026-02-19 15:12:10,921 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:12:10,921 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:12:11,398 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:12:11,398 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:12:16,682 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:12:16,682 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:12:16,682 - main - INFO - Найдено 23 совпадений в VK
+2026-02-19 15:12:16,683 - main - INFO - AI-анализ поста из vk...
+2026-02-19 15:12:49,355 - main - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:12:49,356 - main - INFO - AI-анализ поста из vk...
+2026-02-19 15:13:23,462 - telethon.network.connection.connection - WARNING - Server closed the connection: 0 bytes read on a total of 8 expected bytes
+2026-02-19 15:13:23,463 - telethon.network.mtprotosender - INFO - Connection closed while receiving data: 0 bytes read on a total of 8 expected bytes
+2026-02-19 15:13:23,463 - telethon.network.mtprotosender - INFO - Closing current connection to begin reconnect...
+2026-02-19 15:13:23,463 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2026-02-19 15:13:23,466 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2026-02-19 15:13:23,758 - main - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:13:23,758 - main - INFO - AI-анализ поста из vk...
+2026-02-19 15:13:39,499 - main - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:13:39,499 - main - INFO - AI-анализ поста из vk...
+2026-02-19 15:13:48,243 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:13:57,320 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:13:57,320 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:13:57,749 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:13:57,750 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:14:03,212 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:14:03,213 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:14:03,213 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:14:03,213 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:14:08,928 - tg_monitor - ERROR - Ошибка получения информации о канале @marireporter: database is locked
+2026-02-19 15:14:08,929 - tg_monitor - WARNING - Канал @marireporter не найден
+2026-02-19 15:14:14,595 - tg_monitor - ERROR - Ошибка получения информации о канале @marimlande: database is locked
+2026-02-19 15:14:14,596 - tg_monitor - WARNING - Канал @marimlande не найден
+2026-02-19 15:14:20,272 - tg_monitor - ERROR - Ошибка получения информации о канале @rzsentinel: database is locked
+2026-02-19 15:14:20,273 - tg_monitor - WARNING - Канал @rzsentinel не найден
+2026-02-19 15:14:26,088 - tg_monitor - ERROR - Ошибка получения информации о канале @kprf12reg: database is locked
+2026-02-19 15:14:26,088 - tg_monitor - WARNING - Канал @kprf12reg не найден
+2026-02-19 15:14:31,826 - tg_monitor - ERROR - Ошибка получения информации о канале @StrokinElbaktr: database is locked
+2026-02-19 15:14:31,826 - tg_monitor - WARNING - Канал @StrokinElbaktr не найден
+2026-02-19 15:14:35,278 - main - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:14:35,278 - main - INFO - AI-анализ поста из vk...
+2026-02-19 15:14:37,803 - tg_monitor - ERROR - Ошибка получения информации о канале @vybora: database is locked
+2026-02-19 15:14:37,803 - tg_monitor - WARNING - Канал @vybora не найден
+2026-02-19 15:14:43,597 - tg_monitor - ERROR - Ошибка получения информации о канале @vybory_brief: database is locked
+2026-02-19 15:14:43,597 - tg_monitor - WARNING - Канал @vybory_brief не найден
+2026-02-19 15:14:49,362 - tg_monitor - ERROR - Ошибка получения информации о канале @y555142: database is locked
+2026-02-19 15:14:49,362 - tg_monitor - WARNING - Канал @y555142 не найден
+2026-02-19 15:14:50,974 - main - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:14:50,974 - main - INFO - AI-анализ поста из vk...
+2026-02-19 15:14:55,038 - tg_monitor - ERROR - Ошибка получения информации о канале @marireporter: database is locked
+2026-02-19 15:14:55,039 - tg_monitor - WARNING - Канал marireporter не найден
+2026-02-19 15:14:55,039 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:15:15,472 - main - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:15:15,473 - main - INFO - AI-анализ поста из vk...
+2026-02-19 15:15:34,345 - telethon.client.updates - ERROR - Fatal error handling updates (this is a bug in Telethon v1.42.0, please report it)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\client\updates.py", line 467, in _update_loop
+    _preprocess_updates = await self._preprocess_updates(processed, users, chats)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\client\updates.py", line 478, in _preprocess_updates
+    await utils.maybe_async(self.session.process_entities(types.contacts.ResolvedPeer(None, users, chats)))
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\sessions\sqlite.py", line 301, in process_entities
+    c.executemany(
+    ~~~~~~~~~~~~~^
+        'insert or replace into entities values (?,?,?,?,?,?)', rows)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+2026-02-19 15:15:34,402 - telethon.network.mtprotosender - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2026-02-19 15:15:34,403 - telethon.network.mtprotosender - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2026-02-19 15:15:34,404 - telethon.client.telegrambaseclient - ERROR - Unhandled exception from keepalive_handle after cancelling <class '_asyncio.Task'> (<Task finished name='Task-7' coro=<UpdateMethods._keepalive_loop() done, defined at C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\client\updates.py:485> exception=OperationalError('database is locked')>)
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\helpers.py", line 176, in _cancel
+    await task
+  File "C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\client\updates.py", line 521, in _keepalive_loop
+    await self._save_states_and_entities()
+  File "C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\client\telegrambaseclient.py", line 701, in _save_states_and_entities
+    self.session.process_entities(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        types.contacts.ResolvedPeer(None, [types.InputPeerUser(0, self._mb_entity_cache.self_id)], [])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\sessions\sqlite.py", line 301, in process_entities
+    c.executemany(
+    ~~~~~~~~~~~~~^
+        'insert or replace into entities values (?,?,?,?,?,?)', rows)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+2026-02-19 15:15:35,680 - main - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:15:35,680 - main - INFO - AI-анализ поста из vk...
+2026-02-19 15:15:40,139 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-259' coro=<TelegramBaseClient._disconnect_coro() done, defined at C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\client\telegrambaseclient.py:716> exception=OperationalError('database is locked')>
+Traceback (most recent call last):
+  File "C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\client\telegrambaseclient.py", line 746, in _disconnect_coro
+    await self._save_states_and_entities()
+  File "C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\client\telegrambaseclient.py", line 701, in _save_states_and_entities
+    self.session.process_entities(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        types.contacts.ResolvedPeer(None, [types.InputPeerUser(0, self._mb_entity_cache.self_id)], [])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\PycharmProjects\tg_vk_Radar\.venv\Lib\site-packages\telethon\sessions\sqlite.py", line 301, in process_entities
+    c.executemany(
+    ~~~~~~~~~~~~~^
+        'insert or replace into entities values (?,?,?,?,?,?)', rows)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+2026-02-19 15:16:25,783 - main - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:16:25,783 - main - INFO - AI-анализ поста из vk...
+2026-02-19 15:17:10,689 - __main__ - INFO - Поток мониторинга запущен
+2026-02-19 15:17:12,172 - vk_monitor - INFO - Успешное подключение к VK API
+2026-02-19 15:17:12,172 - __main__ - INFO - VK монитор инициализирован
+2026-02-19 15:17:12,793 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.211:5000
+2026-02-19 15:17:12,793 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-19 15:17:12,893 - telethon.crypto.libssl - INFO - Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2026-02-19 15:17:12,895 - telethon.crypto.aes - INFO - cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2026-02-19 15:17:13,784 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:17:13] "GET /ai HTTP/1.1" 200 -
+2026-02-19 15:17:14,758 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2026-02-19 15:17:14,760 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2026-02-19 15:17:15,274 - tg_monitor - INFO - Успешное подключение к Telegram
+2026-02-19 15:17:15,274 - __main__ - INFO - Telegram монитор инициализирован
+2026-02-19 15:17:15,275 - __main__ - INFO - Telegram нотификатор инициализирован
+2026-02-19 15:17:15,278 - ai_analyzer - INFO - AI-анализатор инициализирован. Модель: z-ai/glm-4.5-air:free
+2026-02-19 15:17:15,278 - __main__ - INFO - AI-анализатор инициализирован
+2026-02-19 15:17:15,278 - __main__ - INFO - Мониторинг запущен. Интервал проверки: 120 сек.
+2026-02-19 15:17:15,278 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:17:16,770 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:17:16] "GET / HTTP/1.1" 200 -
+2026-02-19 15:17:28,210 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:17:28] "GET /ai HTTP/1.1" 200 -
+2026-02-19 15:17:30,615 - main - INFO - Конфигурация сохранена
+2026-02-19 15:17:30,615 - ai_analyzer - INFO - Настройки AI-анализатора обновлены. Модель: z-ai/glm-4.5-air:free
+2026-02-19 15:17:30,617 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:17:30] "[32mPOST /ai/config HTTP/1.1[0m" 302 -
+2026-02-19 15:17:30,630 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:17:30] "GET /ai HTTP/1.1" 200 -
+2026-02-19 15:17:32,251 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:17:32,251 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:17:32,689 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:17:32,689 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:17:33,451 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:17:33] "GET /keywords HTTP/1.1" 200 -
+2026-02-19 15:17:35,775 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:17:35] "GET / HTTP/1.1" 200 -
+2026-02-19 15:17:38,488 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:17:38,488 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:17:38,488 - __main__ - INFO - Найдено 23 совпадений в VK
+2026-02-19 15:17:38,488 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:18:00,882 - __main__ - INFO - Найдено 22 совпадений в Telegram
+2026-02-19 15:18:00,883 - __main__ - INFO - AI-анализ поста из vk...
+2026-02-19 15:18:24,486 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:18:24,486 - __main__ - INFO - AI-анализ поста из vk...
+2026-02-19 15:18:35,607 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:18:35,607 - __main__ - INFO - AI-анализ поста из vk...
+2026-02-19 15:18:47,247 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:18:47,247 - __main__ - INFO - AI-анализ поста из vk...
+2026-02-19 15:18:57,092 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:18:57] "GET / HTTP/1.1" 200 -
+2026-02-19 15:19:02,066 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:19:02] "GET / HTTP/1.1" 200 -
+2026-02-19 15:19:10,965 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:19:10,966 - __main__ - INFO - AI-анализ поста из vk...
+2026-02-19 15:19:21,501 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:19:21] "GET /keywords HTTP/1.1" 200 -
+2026-02-19 15:19:24,989 - main - INFO - Конфигурация сохранена
+2026-02-19 15:19:24,990 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:19:24] "[32mGET /keywords/remove/депутат HTTP/1.1[0m" 302 -
+2026-02-19 15:19:25,065 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:19:25] "GET /keywords HTTP/1.1" 200 -
+2026-02-19 15:19:27,497 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:19:27] "GET / HTTP/1.1" 200 -
+2026-02-19 15:19:36,417 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:19:36,417 - __main__ - INFO - AI-анализ поста из vk...
+2026-02-19 15:19:59,927 - __main__ - INFO - Поток мониторинга запущен
+2026-02-19 15:20:01,117 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.211:5000
+2026-02-19 15:20:01,117 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-19 15:20:01,148 - vk_monitor - INFO - Успешное подключение к VK API
+2026-02-19 15:20:01,148 - __main__ - INFO - VK монитор инициализирован
+2026-02-19 15:20:01,554 - telethon.crypto.libssl - INFO - Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2026-02-19 15:20:01,555 - telethon.crypto.aes - INFO - cryptg module not installed and libssl not found, falling back to (slower) Python encryption
+2026-02-19 15:20:02,165 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2026-02-19 15:20:02,167 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2026-02-19 15:20:02,723 - tg_monitor - INFO - Успешное подключение к Telegram
+2026-02-19 15:20:02,724 - __main__ - INFO - Telegram монитор инициализирован
+2026-02-19 15:20:02,724 - __main__ - INFO - Telegram нотификатор инициализирован
+2026-02-19 15:20:02,726 - __main__ - INFO - AI-анализ выключен или не настроен
+2026-02-19 15:20:02,726 - __main__ - INFO - Мониторинг запущен. Интервал проверки: 120 сек.
+2026-02-19 15:20:02,727 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:20:15,719 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:20:15,719 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:20:16,149 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:20:16,149 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:20:17,029 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:20:17] "GET / HTTP/1.1" 200 -
+2026-02-19 15:20:19,063 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:20:19] "GET / HTTP/1.1" 200 -
+2026-02-19 15:20:21,624 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:20:21,624 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:20:21,625 - __main__ - INFO - Найдено 15 совпадений в VK
+2026-02-19 15:20:21,625 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:20:50,296 - __main__ - INFO - Найдено 5 совпадений в Telegram
+2026-02-19 15:20:50,690 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:51,057 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:51,437 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:51,820 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:52,226 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:52,605 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:53,043 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:53,518 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:53,959 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:54,389 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:54,809 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:55,203 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:55,626 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:56,024 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:56,401 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:56,795 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:57,284 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:57,728 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:58,137 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:20:58,549 - __main__ - INFO - Уведомление отправлено 1 получателям
+2026-02-19 15:23:14,375 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:23:25,241 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:23:25,241 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:23:25,690 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:23:25,690 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:23:30,911 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:23:30,911 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:23:30,912 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:23:30,912 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:23:44,256 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:25:47,404 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:25:56,885 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:25:56,886 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:25:57,323 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:25:57,323 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:26:02,840 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:26:02,840 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:26:02,840 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:26:02,840 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:26:16,343 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:28:18,978 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:28:28,366 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:28:28,367 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:28:28,798 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:28:28,798 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:28:34,253 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:28:34,253 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:28:34,253 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:28:34,253 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:28:48,055 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:31:06,590 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:31:16,227 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:31:16,227 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:31:16,661 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:31:16,661 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:31:22,703 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:31:22,703 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:31:22,703 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:31:22,703 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:31:36,295 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:33:37,319 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:34:44,966 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:34:44,966 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:34:45,400 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:34:45,400 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:34:58,762 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:34:58,762 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:34:58,762 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:34:58,762 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:35:12,294 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:37:15,457 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:37:24,884 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:37:24,884 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:37:25,325 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:37:25,326 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:37:30,342 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:37:30,342 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:37:30,342 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:37:30,342 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:37:43,546 - __main__ - INFO - Найдено 0 совпадений в Telegram
+2026-02-19 15:38:08,118 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:38:08] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-02-19 15:38:08,150 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:38:08] "GET /login HTTP/1.1" 200 -
+2026-02-19 15:38:10,269 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:38:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-02-19 15:38:10,288 - werkzeug - INFO - 127.0.0.1 - - [19/Feb/2026 15:38:10] "GET / HTTP/1.1" 200 -
+2026-02-19 15:39:52,652 - __main__ - INFO - Проверка 12 VK групп...
+2026-02-19 15:40:02,054 - vk_monitor - ERROR - Ошибка получения информации о группе id125219567: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:40:02,054 - vk_monitor - WARNING - Группа id125219567 не найдена
+2026-02-19 15:40:02,486 - vk_monitor - ERROR - Ошибка получения информации о группе kirillpanko: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:40:02,487 - vk_monitor - WARNING - Группа kirillpanko не найдена
+2026-02-19 15:40:08,747 - vk_monitor - ERROR - Ошибка получения информации о группе semgazeta12: [100] One of the parameters specified was missing or invalid: group_id not domain
+2026-02-19 15:40:08,747 - vk_monitor - WARNING - Группа semgazeta12 не найдена
+2026-02-19 15:40:08,748 - __main__ - INFO - Найдено 0 совпадений в VK
+2026-02-19 15:40:08,748 - __main__ - INFO - Проверка 9 Telegram каналов...
+2026-02-19 15:40:23,321 - __main__ - INFO - Найдено 0 совпадений в Telegram
